@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/mosop/cd">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Cd::DirEntry - github.com/mosop/cd</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/mosop/cd/Cd" data-name="cd">
+      <a href="../Cd.html">Cd</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/AnyEntry" data-name="cd::anyentry">
+      <a href="../Cd/AnyEntry.html">AnyEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/AsAnyEntry" data-name="cd::asanyentry">
+      <a href="../Cd/AsAnyEntry.html">AsAnyEntry</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/mosop/cd/Cd/DirEntry" data-name="cd::direntry">
+      <a href="../Cd/DirEntry.html">DirEntry</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/mosop/cd/Cd/Examples" data-name="cd::examples">
+      <a href="../Cd/Examples.html">Examples</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/mosop/cd/Cd/Examples/CrystalDir" data-name="cd::examples::crystaldir">
+      <a href="../Cd/Examples/CrystalDir.html">CrystalDir</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/Examples/CrystalDir/SpecDir" data-name="cd::examples::crystaldir::specdir">
+      <a href="../Cd/Examples/CrystalDir/SpecDir.html">SpecDir</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Cd::DirEntry
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cd/DirEntry.html">Cd::DirEntry</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Manipulates a directory path.</p>
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Cd/AsAnyEntry.html">Cd::AsAnyEntry</a></li>
+  
+  </ul>
+
+
+
+
+
+  <h2>Direct Known Subclasses</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Cd/Examples/CrystalDir.html">Cd::Examples::CrystalDir</a></li>
+  
+    <li class="other-type"><a href="../Cd/Examples/CrystalDir/SpecDir.html">Cd::Examples::CrystalDir::SpecDir</a></li>
+  
+  </ul>
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry/macros/any.cr#L2" target="_blank">lib/dir_entry/macros/any.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry/macros/dir.cr#L2" target="_blank">lib/dir_entry/macros/dir.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L5" target="_blank">lib/dir_entry.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/examples/crystal_dir.cr#L29" target="_blank">examples/crystal_dir.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/examples/crystal_dir.cr#L30" target="_blank">examples/crystal_dir.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#cd%28%2Aargs%2C%26block%29-class-method" class="signature"><strong>.cd</strong>(*args, &block)</a>
+        
+          <div class="summary"><p>Changes the current directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tmp%28base%3D%26quot%3B%2Ftmp%26quot%3B%2C%26block%29-class-method" class="signature"><strong>.tmp</strong>(base = <span class="s">&quot;/tmp&quot;</span>, &block)</a>
+        
+          <div class="summary"><p>Changes the current directory into a new temporary directory.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%28%2Aargs%29-instance-method" class="signature"><strong>#[]</strong>(*args)</a>
+        
+          <div class="summary"><p>Creates and returns a new underlying <code><a href="../Cd/AnyEntry.html">AnyEntry</a></code> instance.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%3F%28%2Aargs%29-instance-method" class="signature"><strong>#[]?</strong>(*args)</a>
+        
+          <div class="summary"><p>Creates and returns a new underlying <code><a href="../Cd/AnyEntry.html">AnyEntry</a></code> instance.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cd%28%2Aargs%2C%26block%29-instance-method" class="signature"><strong>#cd</strong>(*args, &block)</a>
+        
+          <div class="summary"><p>Changes the current directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cp%28dst%3AString%29-instance-method" class="signature"><strong>#cp</strong>(dst : String)</a>
+        
+          <div class="summary"><p>Copies all this directory's contents recursively to the <em>dst</em> path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cp%28dst%3ACd%29-instance-method" class="signature"><strong>#cp</strong>(dst : Cd)</a>
+        
+          <div class="summary"><p>Copies all this directory's contents recursively to the <em>dst</em> path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create-instance-method" class="signature"><strong>#create</strong></a>
+        
+          <div class="summary"><p>Creates this directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dir%28%2Aargs%29-instance-method" class="signature"><strong>#dir</strong>(*args)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Cd/DirEntry.html">DirEntry</a></code> instance under this directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each%28%26block%29-instance-method" class="signature"><strong>#each</strong>(&block)</a>
+        
+          <div class="summary"><p>Iterates underlying entries.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#exists%3F-instance-method" class="signature"><strong>#exists?</strong></a>
+        
+          <div class="summary"><p>Tests if this directory exists.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#glob%28%2Apatterns%2C%26block%29-instance-method" class="signature"><strong>#glob</strong>(*patterns, &block)</a>
+        
+          <div class="summary"><p>Searches and iterates file entries under this directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#glob%28%2Apatterns%29%3AArray%28AnyEntry%29-instance-method" class="signature"><strong>#glob</strong>(*patterns) : Array(AnyEntry)</a>
+        
+          <div class="summary"><p>Searches and returns file entries under this directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28path%3AString%29-instance-method" class="signature"><strong>#new</strong>(path : String)</a>
+        
+          <div class="summary"><p>Creates a new instance in this instance context.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#path%3AString-instance-method" class="signature"><strong>#path</strong> : String</a>
+        
+          <div class="summary"><p>Returns this directory's path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#remove%28%2Aargs%29-instance-method" class="signature"><strong>#remove</strong>(*args)</a>
+        
+          <div class="summary"><p>Removes this directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tmp%28%2Aargs%2C%26block%29-instance-method" class="signature"><strong>#tmp</strong>(*args, &block)</a>
+        
+          <div class="summary"><p>Changes the current directory into a new temporary directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tmp%28%2Aargs%29-instance-method" class="signature"><strong>#tmp</strong>(*args)</a>
+        
+          <div class="summary"><p>Creates and returns a new temporary directory.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Macro Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#any%28name%2Ctype%3D%3A%3ACd%3A%3AAnyEntry%2Cmethod%3Dnil%2Ccreate%3Dfalse%2Cmode%3Dnil%29-macro" class="signature"><strong>any</strong>(name, type = ::Cd::AnyEntry, method = nil, create = false, mode = nil)</a>
+        
+          <div class="summary"><p>Defines helper methods for manipulating the given subentry.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dir%28name%2Ctype%3D%3A%3ACd%3A%3ADirEntry%2Cmethod%3Dnil%29-macro" class="signature"><strong>dir</strong>(name, type = ::Cd::DirEntry, method = nil)</a>
+        
+          <div class="summary"><p>Defines helper methods for manipulating the given subdirectory.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../Cd/AsAnyEntry.html">Cd::AsAnyEntry</a></code></h3>
+  
+  
+    <a href="../Cd/AsAnyEntry.html#append%28text%29-instance-method" class="tooltip">
+      <span>append(text)</span>
+    append</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#basename%28suffix%3AString%3F%29-instance-method" class="tooltip">
+      <span>basename(suffix : String?)</span>
+    basename</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#chmod%28mode%3AInt%29-instance-method" class="tooltip">
+      <span>chmod(mode : Int)</span>
+    chmod</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#cp%28dst%3AAsAnyEntry%29-instance-method" class="tooltip">
+      <span>cp(dst : AsAnyEntry)<br/>cp(dst : String)</span>
+    cp</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#dir-instance-method" class="tooltip">
+      <span>dir</span>
+    dir</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#directory%3F%28%2Aargs%29-instance-method" class="tooltip">
+      <span>directory?(*args)</span>
+    directory?</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#dirname-instance-method" class="tooltip">
+      <span>dirname</span>
+    dirname</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#exists%3F-instance-method" class="tooltip">
+      <span>exists?</span>
+    exists?</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#file%3F%28%2Aargs%29-instance-method" class="tooltip">
+      <span>file?(*args)</span>
+    file?</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#join%28%2Aargs%29-instance-method" class="tooltip">
+      <span>join(*args)</span>
+    join</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#read-instance-method" class="tooltip">
+      <span>read</span>
+    read</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#real_path-instance-method" class="tooltip">
+      <span>real_path</span>
+    real_path</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#symlink%3F-instance-method" class="tooltip">
+      <span>symlink?</span>
+    symlink?</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#to_s%28io%3AIO%29-instance-method" class="tooltip">
+      <span>to_s(io : IO)</span>
+    to_s</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#touch%28mode%3AInt%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>touch(mode : Int? = <span class="n">nil</span>)</span>
+    touch</a>, 
+    
+  
+    <a href="../Cd/AsAnyEntry.html#write%28text%2Cmode%3AInt%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>write(text, mode : Int? = <span class="n">nil</span>)</span>
+    write</a>
+    
+  
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="cd&#40;*args,&amp;block&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>cd</strong>(*args, &block)
+
+        <a class="method-permalink" href="#cd%28%2Aargs%2C%26block%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Changes the current directory.</p>
+
+<p>This method creates a new <code><a href="../Cd/DirEntry.html">DirEntry</a></code> instance with a path that joins the <em>args</em> path components.</p>
+
+<p>If the joined path is relative, the path is expanded under the current directory's path.</p>
+
+<p>The <em>block</em> is called with the new instance.</p>
+
+<p>The current directory is restored after the <em>block</em> returns.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tmp&#40;base&#61;&amp;quot;/tmp&amp;quot;,&amp;block&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>tmp</strong>(base = <span class="s">&quot;/tmp&quot;</span>, &block)
+
+        <a class="method-permalink" href="#tmp%28base%3D%26quot%3B%2Ftmp%26quot%3B%2C%26block%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Changes the current directory into a new temporary directory.</p>
+
+<p>This method creates a new <code><a href="../Cd/DirEntry.html">DirEntry</a></code> instance with the new temporary directory's path.</p>
+
+<p>The <em>block</em> is called with the new instance.</p>
+
+<p>The current directory is restored after the <em>block</em> returns.</p>
+
+<p>The temporary directory is removed after the <em>block</em> returns.</p>
+
+<h3>Parameters</h3>
+
+<ul><li><em>base</em> : a directory path that the temporary directory is created in</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L96" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="&#91;&#93;&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>[]</strong>(*args)
+
+        <a class="method-permalink" href="#%5B%5D%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates and returns a new underlying <code><a href="../Cd/AnyEntry.html">AnyEntry</a></code> instance.</p>
+
+<h3>Parameters</h3>
+
+<ul><li><em>args</em> : path components under this directory</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L193" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="&#91;&#93;?&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>[]?</strong>(*args)
+
+        <a class="method-permalink" href="#%5B%5D%3F%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates and returns a new underlying <code><a href="../Cd/AnyEntry.html">AnyEntry</a></code> instance.</p>
+
+<p>Returns nil if the entry does not exist.</p>
+
+<h3>Parameters</h3>
+
+<ul><li><em>args</em> : path components under this directory</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L204" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cd&#40;*args,&amp;block&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>cd</strong>(*args, &block)
+
+        <a class="method-permalink" href="#cd%28%2Aargs%2C%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Changes the current directory.</p>
+
+<p>This method creates a new <code><a href="../Cd/DirEntry.html">DirEntry</a></code> instance with a path that joins this directory's path and the <em>args</em> path components.</p>
+
+<p>The <em>block</em> is called with the new instance.</p>
+
+<p>The current directory is restored after the <em>block</em> returns.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L66" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cp&#40;dst:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>cp</strong>(dst : String)
+
+        <a class="method-permalink" href="#cp%28dst%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Copies all this directory's contents recursively to the <em>dst</em> path.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L170" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cp&#40;dst:Cd&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>cp</strong>(dst : <a href="../Cd.html">Cd</a>)
+
+        <a class="method-permalink" href="#cp%28dst%3ACd%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Copies all this directory's contents recursively to the <em>dst</em> path.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L184" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create-instance-method">
+      <div class="signature">
+        
+        def <strong>create</strong>
+
+        <a class="method-permalink" href="#create-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates this directory.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L210" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dir&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>dir</strong>(*args)
+
+        <a class="method-permalink" href="#dir%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Cd/DirEntry.html">DirEntry</a></code> instance under this directory.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L79" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each&#40;&amp;block&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>each</strong>(&block)
+
+        <a class="method-permalink" href="#each%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Iterates underlying entries.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L221" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="exists?-instance-method">
+      <div class="signature">
+        
+        def <strong>exists?</strong>
+
+        <a class="method-permalink" href="#exists%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Tests if this directory exists.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L141" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="glob&#40;*patterns,&amp;block&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>glob</strong>(*patterns, &block)
+
+        <a class="method-permalink" href="#glob%28%2Apatterns%2C%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Searches and iterates file entries under this directory.</p>
+
+<h3>Parameters</h3>
+
+<ul><li><em>patterns</em> : search patterns; each pattern is joined under this directory's path.</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L150" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="glob&#40;*patterns&#41;:Array&#40;AnyEntry&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>glob</strong>(*patterns) : Array(<a href="../Cd/AnyEntry.html">AnyEntry</a>)
+
+        <a class="method-permalink" href="#glob%28%2Apatterns%29%3AArray%28AnyEntry%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Searches and returns file entries under this directory.</p>
+
+<h3>Parameters</h3>
+
+<ul><li><em>patterns</em> : search patterns; each pattern is joined under this directory's path.</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L161" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;path:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>new</strong>(path : String)
+
+        <a class="method-permalink" href="#new%28path%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new instance in this instance context.</p>
+
+<p>Override this method if subclassified instances should be initialized in a special way.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="path:String-instance-method">
+      <div class="signature">
+        
+        def <strong>path</strong> : String
+
+        <a class="method-permalink" href="#path%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns this directory's path.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="remove&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>remove</strong>(*args)
+
+        <a class="method-permalink" href="#remove%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Removes this directory.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L216" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tmp&#40;*args,&amp;block&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>tmp</strong>(*args, &block)
+
+        <a class="method-permalink" href="#tmp%28%2Aargs%2C%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Changes the current directory into a new temporary directory.</p>
+
+<p>This method creates a temporary directory, using C mkdtemp, under this directory's path and a new <code><a href="../Cd/DirEntry.html">DirEntry</a></code> instance with a path that joins the temporary directory's path and the <em>args</em> path components.</p>
+
+<p>The <em>block</em> is called with tthe new instance.</p>
+
+<p>The temporary directory is removed after the <em>block</em> returns.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tmp&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>tmp</strong>(*args)
+
+        <a class="method-permalink" href="#tmp%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates and returns a new temporary directory.</p>
+
+<p>This method creates a new <code><a href="../Cd/DirEntry.html">DirEntry</a></code> instance with a path that joins the new temporary directory's path and the <em>args</em> path components.</p>
+
+<p>The temporary directory is created under this directory.</p>
+
+<p>If this instance is created by the <code><a href="../Cd/DirEntry.html#cd%28%2Aargs%2C%26block%29-instance-method">DirEntry#cd</a></code> method, the temporary directory is removed after the cd method returns.</p>
+
+<p>Otherwise, the temporary directory is never automatically removed.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Macro Detail</h2>
+  
+    <div class="entry-detail" id="any&#40;name,type&#61;::Cd::AnyEntry,method&#61;nil,create&#61;false,mode&#61;nil&#41;-macro">
+      <div class="signature">
+        
+        macro <strong>any</strong>(name, type = ::Cd::AnyEntry, method = nil, create = false, mode = nil)
+
+        <a class="method-permalink" href="#any%28name%2Ctype%3D%3A%3ACd%3A%3AAnyEntry%2Cmethod%3Dnil%2Ccreate%3Dfalse%2Cmode%3Dnil%29-macro">#</a>
+      </div>
+      
+        <div class="doc"><p>Defines helper methods for manipulating the given subentry.</p>
+
+<p>See <code><a href="../Cd/Examples/CrystalDir.html">Examples::CrystalDir</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry/macros/any.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dir&#40;name,type&#61;::Cd::DirEntry,method&#61;nil&#41;-macro">
+      <div class="signature">
+        
+        macro <strong>dir</strong>(name, type = ::Cd::DirEntry, method = nil)
+
+        <a class="method-permalink" href="#dir%28name%2Ctype%3D%3A%3ACd%3A%3ADirEntry%2Cmethod%3Dnil%29-macro">#</a>
+      </div>
+      
+        <div class="doc"><p>Defines helper methods for manipulating the given subdirectory.</p>
+
+<p>See <code><a href="../Cd/Examples/CrystalDir.html">Examples::CrystalDir</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/dir_entry/macros/dir.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

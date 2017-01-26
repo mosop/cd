@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/mosop/cd">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Cd::AsAnyEntry - github.com/mosop/cd</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/mosop/cd/Cd" data-name="cd">
+      <a href="../Cd.html">Cd</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/AnyEntry" data-name="cd::anyentry">
+      <a href="../Cd/AnyEntry.html">AnyEntry</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/mosop/cd/Cd/AsAnyEntry" data-name="cd::asanyentry">
+      <a href="../Cd/AsAnyEntry.html">AsAnyEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/DirEntry" data-name="cd::direntry">
+      <a href="../Cd/DirEntry.html">DirEntry</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/mosop/cd/Cd/Examples" data-name="cd::examples">
+      <a href="../Cd/Examples.html">Examples</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/mosop/cd/Cd/Examples/CrystalDir" data-name="cd::examples::crystaldir">
+      <a href="../Cd/Examples/CrystalDir.html">CrystalDir</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/Examples/CrystalDir/SpecDir" data-name="cd::examples::crystaldir::specdir">
+      <a href="../Cd/Examples/CrystalDir/SpecDir.html">SpecDir</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Cd::AsAnyEntry
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Manupulates a file or directory path.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Cd/AnyEntry.html">Cd::AnyEntry</a></li>
+  
+    <li class="other-type"><a href="../Cd/DirEntry.html">Cd::DirEntry</a></li>
+  
+  </ul>
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L3" target="_blank">lib/as_any_entry.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#append%28text%29-instance-method" class="signature"><strong>#append</strong>(text)</a>
+        
+          <div class="summary"><p>Appends text to this entry as a file.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#basename%28suffix%3AString%3F%29-instance-method" class="signature"><strong>#basename</strong>(suffix : String?)</a>
+        
+          <div class="summary"><p>Returns this entry's base name.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#chmod%28mode%3AInt%29-instance-method" class="signature"><strong>#chmod</strong>(mode : Int)</a>
+        
+          <div class="summary"><p>Changes this entry's mode.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cp%28dst%3AAsAnyEntry%29-instance-method" class="signature"><strong>#cp</strong>(dst : AsAnyEntry)</a>
+        
+          <div class="summary"><p>Copies this entry as a file to the <em>dst</em> path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cp%28dst%3AString%29-instance-method" class="signature"><strong>#cp</strong>(dst : String)</a>
+        
+          <div class="summary"><p>Copies this entry as a file to the <em>dst</em> path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dir-instance-method" class="signature"><strong>#dir</strong></a>
+        
+          <div class="summary"><p>Returns a directory that contains this entry.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#directory%3F%28%2Aargs%29-instance-method" class="signature"><strong>#directory?</strong>(*args)</a>
+        
+          <div class="summary"><p>Tests if this entry is a directory.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dirname-instance-method" class="signature"><strong>#dirname</strong></a>
+        
+          <div class="summary"><p>Returns a directory path that contains this entry.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#exists%3F-instance-method" class="signature"><strong>#exists?</strong></a>
+        
+          <div class="summary"><p>Tests if this entry exists.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#file%3F%28%2Aargs%29-instance-method" class="signature"><strong>#file?</strong>(*args)</a>
+        
+          <div class="summary"><p>Tests if this entry is a file.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#join%28%2Aargs%29-instance-method" class="signature"><strong>#join</strong>(*args)</a>
+        
+          <div class="summary"><p>Joins this entry's path and given path components.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#read-instance-method" class="signature"><strong>#read</strong></a>
+        
+          <div class="summary"><p>Reads this entry as a file.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#real_path-instance-method" class="signature"><strong>#real_path</strong></a>
+        
+          <div class="summary"><p>Returns this entry's real path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#symlink%3F-instance-method" class="signature"><strong>#symlink?</strong></a>
+        
+          <div class="summary"><p>Tests if this entry is a symlink.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s%28io%3AIO%29-instance-method" class="signature"><strong>#to_s</strong>(io : IO)</a>
+        
+          <div class="summary"><p>Writes this entry's path to the IO.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#touch%28mode%3AInt%3F%3Dnil%29-instance-method" class="signature"><strong>#touch</strong>(mode : Int? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Creates an empty file if this entry does not exists.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#write%28text%2Cmode%3AInt%3F%3Dnil%29-instance-method" class="signature"><strong>#write</strong>(text, mode : Int? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Writes text to this entry as a file.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="append&#40;text&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>append</strong>(text)
+
+        <a class="method-permalink" href="#append%28text%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Appends text to this entry as a file.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="basename&#40;suffix:String?&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>basename</strong>(suffix : String?)
+
+        <a class="method-permalink" href="#basename%28suffix%3AString%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns this entry's base name.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="chmod&#40;mode:Int&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>chmod</strong>(mode : Int)
+
+        <a class="method-permalink" href="#chmod%28mode%3AInt%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Changes this entry's mode.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cp&#40;dst:AsAnyEntry&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>cp</strong>(dst : <a href="../Cd/AsAnyEntry.html">AsAnyEntry</a>)
+
+        <a class="method-permalink" href="#cp%28dst%3AAsAnyEntry%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Copies this entry as a file to the <em>dst</em> path.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L74" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cp&#40;dst:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>cp</strong>(dst : String)
+
+        <a class="method-permalink" href="#cp%28dst%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Copies this entry as a file to the <em>dst</em> path.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dir-instance-method">
+      <div class="signature">
+        
+        def <strong>dir</strong>
+
+        <a class="method-permalink" href="#dir-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns a directory that contains this entry.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L89" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="directory?&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>directory?</strong>(*args)
+
+        <a class="method-permalink" href="#directory%3F%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Tests if this entry is a directory.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dirname-instance-method">
+      <div class="signature">
+        
+        def <strong>dirname</strong>
+
+        <a class="method-permalink" href="#dirname-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns a directory path that contains this entry.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L79" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="exists?-instance-method">
+      <div class="signature">
+        
+        def <strong>exists?</strong>
+
+        <a class="method-permalink" href="#exists%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Tests if this entry exists.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="file?&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>file?</strong>(*args)
+
+        <a class="method-permalink" href="#file%3F%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Tests if this entry is a file.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="join&#40;*args&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>join</strong>(*args)
+
+        <a class="method-permalink" href="#join%28%2Aargs%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Joins this entry's path and given path components.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L58" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>
+
+        <a class="method-permalink" href="#read-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Reads this entry as a file.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="real_path-instance-method">
+      <div class="signature">
+        
+        def <strong>real_path</strong>
+
+        <a class="method-permalink" href="#real_path-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns this entry's real path.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="symlink?-instance-method">
+      <div class="signature">
+        
+        def <strong>symlink?</strong>
+
+        <a class="method-permalink" href="#symlink%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Tests if this entry is a symlink.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s&#40;io:IO&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io : IO)
+
+        <a class="method-permalink" href="#to_s%28io%3AIO%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Writes this entry's path to the IO.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="touch&#40;mode:Int?&#61;nil&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>touch</strong>(mode : Int? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#touch%28mode%3AInt%3F%3Dnil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates an empty file if this entry does not exists.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="write&#40;text,mode:Int?&#61;nil&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>write</strong>(text, mode : Int? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#write%28text%2Cmode%3AInt%3F%3Dnil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Writes text to this entry as a file.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/lib/as_any_entry.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

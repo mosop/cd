@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/mosop/cd">
+  <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../../js/doc.js"></script>
+  <title>Cd::Examples::CrystalDir::SpecDir - github.com/mosop/cd</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/mosop/cd/Cd" data-name="cd">
+      <a href="../../../Cd.html">Cd</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/AnyEntry" data-name="cd::anyentry">
+      <a href="../../../Cd/AnyEntry.html">AnyEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/AsAnyEntry" data-name="cd::asanyentry">
+      <a href="../../../Cd/AsAnyEntry.html">AsAnyEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/DirEntry" data-name="cd::direntry">
+      <a href="../../../Cd/DirEntry.html">DirEntry</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/mosop/cd/Cd/Examples" data-name="cd::examples">
+      <a href="../../../Cd/Examples.html">Examples</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/mosop/cd/Cd/Examples/CrystalDir" data-name="cd::examples::crystaldir">
+      <a href="../../../Cd/Examples/CrystalDir.html">CrystalDir</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/mosop/cd/Cd/Examples/CrystalDir/SpecDir" data-name="cd::examples::crystaldir::specdir">
+      <a href="../../../Cd/Examples/CrystalDir/SpecDir.html">SpecDir</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Cd::Examples::CrystalDir::SpecDir
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../../Cd/Examples/CrystalDir/SpecDir.html">Cd::Examples::CrystalDir::SpecDir</a></li><li class="superclass"><a href="../../../Cd/DirEntry.html">Cd::DirEntry</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/examples/crystal_dir.cr#L30" target="_blank">examples/crystal_dir.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#files-instance-method" class="signature"><strong>#files</strong></a>
+        
+          <div class="summary"><p>Searches spec files.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../../../Cd/DirEntry.html">Cd::DirEntry</a></code></h3>
+  
+  
+    <a href="../../../Cd/DirEntry.html#%5B%5D%28%2Aargs%29-instance-method" class="tooltip">
+      <span>[](*args)</span>
+    []</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#%5B%5D%3F%28%2Aargs%29-instance-method" class="tooltip">
+      <span>[]?(*args)</span>
+    []?</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#cd%28%2Aargs%2C%26block%29-instance-method" class="tooltip">
+      <span>cd(*args, &block)</span>
+    cd</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#cp%28dst%3AString%29-instance-method" class="tooltip">
+      <span>cp(dst : String)<br/>cp(dst : Cd)</span>
+    cp</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#create-instance-method" class="tooltip">
+      <span>create</span>
+    create</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#dir%28%2Aargs%29-instance-method" class="tooltip">
+      <span>dir(*args)</span>
+    dir</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#each%28%26block%29-instance-method" class="tooltip">
+      <span>each(&block)</span>
+    each</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#exists%3F-instance-method" class="tooltip">
+      <span>exists?</span>
+    exists?</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#glob%28%2Apatterns%2C%26block%29-instance-method" class="tooltip">
+      <span>glob(*patterns, &block)<br/>glob(*patterns) : Array(AnyEntry)</span>
+    glob</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#new%28path%3AString%29-instance-method" class="tooltip">
+      <span>new(path : String)</span>
+    new</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#path%3AString-instance-method" class="tooltip">
+      <span>path : String</span>
+    path</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#remove%28%2Aargs%29-instance-method" class="tooltip">
+      <span>remove(*args)</span>
+    remove</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#tmp%28%2Aargs%2C%26block%29-instance-method" class="tooltip">
+      <span>tmp(*args, &block)<br/>tmp(*args)</span>
+    tmp</a>
+    
+  
+
+
+    
+
+  <h3>Class methods inherited from class <code><a href="../../../Cd/DirEntry.html">Cd::DirEntry</a></code></h3>
+  
+  
+    <a href="../../../Cd/DirEntry.html#cd%28%2Aargs%2C%26block%29-class-method" class="tooltip">
+      <span>cd(*args, &block)</span>
+    cd</a>, 
+    
+  
+    <a href="../../../Cd/DirEntry.html#tmp%28base%3D%26quot%3B%2Ftmp%26quot%3B%2C%26block%29-class-method" class="tooltip">
+      <span>tmp(base = <span class="s">&quot;/tmp&quot;</span>, &block)</span>
+    tmp</a>
+    
+  
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../../../Cd/AsAnyEntry.html">Cd::AsAnyEntry</a></code></h3>
+  
+  
+    <a href="../../../Cd/AsAnyEntry.html#append%28text%29-instance-method" class="tooltip">
+      <span>append(text)</span>
+    append</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#basename%28suffix%3AString%3F%29-instance-method" class="tooltip">
+      <span>basename(suffix : String?)</span>
+    basename</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#chmod%28mode%3AInt%29-instance-method" class="tooltip">
+      <span>chmod(mode : Int)</span>
+    chmod</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#cp%28dst%3AAsAnyEntry%29-instance-method" class="tooltip">
+      <span>cp(dst : AsAnyEntry)<br/>cp(dst : String)</span>
+    cp</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#dir-instance-method" class="tooltip">
+      <span>dir</span>
+    dir</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#directory%3F%28%2Aargs%29-instance-method" class="tooltip">
+      <span>directory?(*args)</span>
+    directory?</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#dirname-instance-method" class="tooltip">
+      <span>dirname</span>
+    dirname</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#exists%3F-instance-method" class="tooltip">
+      <span>exists?</span>
+    exists?</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#file%3F%28%2Aargs%29-instance-method" class="tooltip">
+      <span>file?(*args)</span>
+    file?</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#join%28%2Aargs%29-instance-method" class="tooltip">
+      <span>join(*args)</span>
+    join</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#read-instance-method" class="tooltip">
+      <span>read</span>
+    read</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#real_path-instance-method" class="tooltip">
+      <span>real_path</span>
+    real_path</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#symlink%3F-instance-method" class="tooltip">
+      <span>symlink?</span>
+    symlink?</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#to_s%28io%3AIO%29-instance-method" class="tooltip">
+      <span>to_s(io : IO)</span>
+    to_s</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#touch%28mode%3AInt%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>touch(mode : Int? = <span class="n">nil</span>)</span>
+    touch</a>, 
+    
+  
+    <a href="../../../Cd/AsAnyEntry.html#write%28text%2Cmode%3AInt%3F%3Dnil%29-instance-method" class="tooltip">
+      <span>write(text, mode : Int? = <span class="n">nil</span>)</span>
+    write</a>
+    
+  
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="files-instance-method">
+      <div class="signature">
+        
+        def <strong>files</strong>
+
+        <a class="method-permalink" href="#files-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Searches spec files.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/mosop/cd/blob/f8c9c128204b2d3abb4a7692d1844f891079634a/src/examples/crystal_dir.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

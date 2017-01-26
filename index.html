@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/mosop/cd">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/doc.js"></script>
+  <title>README - github.com/mosop/cd</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li class="current"><a href="index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent " data-id="github.com/mosop/cd/Cd" data-name="cd">
+      <a href="Cd.html">Cd</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/AnyEntry" data-name="cd::anyentry">
+      <a href="Cd/AnyEntry.html">AnyEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/AsAnyEntry" data-name="cd::asanyentry">
+      <a href="Cd/AsAnyEntry.html">AsAnyEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/DirEntry" data-name="cd::direntry">
+      <a href="Cd/DirEntry.html">DirEntry</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/mosop/cd/Cd/Examples" data-name="cd::examples">
+      <a href="Cd/Examples.html">Examples</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/mosop/cd/Cd/Examples/CrystalDir" data-name="cd::examples::crystaldir">
+      <a href="Cd/Examples/CrystalDir.html">CrystalDir</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/mosop/cd/Cd/Examples/CrystalDir/SpecDir" data-name="cd::examples::crystaldir::specdir">
+      <a href="Cd/Examples/CrystalDir/SpecDir.html">SpecDir</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1>Cd</h1>
+
+<p>A Crystal library for walking through directories and manipulating file entries in its object-oriented way.</p>
+
+<p><a href="https://travis-ci.org/mosop/cd" target="_blank"><img src="https://travis-ci.org/mosop/cd.svg?branch=master" alt="Build Status"/></a></p>
+
+<h2>Installation</h2>
+
+<p>Add this to your application's <code>shard.yml</code>:</p>
+
+<pre><code class='language-yaml'>dependencies:
+  cd:
+    github: mosop/cd</code></pre>
+
+<p>&lt;a name="code_samples">&lt;/a></p>
+
+<h2>Code Samples</h2>
+
+<h3>Changing the Current Directory</h3>
+
+<pre><code class='language-crystal'><span class="t">Cd</span>.into(<span class="s">&quot;/path/to/foo&quot;</span>) <span class="k">do</span>
+  <span class="t">Dir</span>.current <span class="c"># &quot;/path/to/foo&quot;</span>
+<span class="k">end</span></code></pre>
+
+<h3>Further Inside</h3>
+
+<pre><code class='language-crystal'><span class="t">Cd</span>.into(<span class="s">&quot;/path/to/foo&quot;</span>) <span class="k">do</span> <span class="o">|</span>foo<span class="o">|</span>
+  foo.cd(<span class="s">&quot;bar&quot;</span>) <span class="k">do</span> <span class="o">|</span>bar<span class="o">|</span>
+    bar.cd(<span class="s">&quot;baz&quot;</span>) <span class="k">do</span>
+      <span class="t">Dir</span>.current <span class="c"># &quot;/path/to/foo/bar/baz&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+
+<h3>Searching Underlying Entries</h3>
+
+<pre><code class='language-crystal'><span class="t">Cd</span>.into(<span class="s">&quot;/path/to/foo&quot;</span>) <span class="k">do</span>
+  foo.glob(<span class="s">&quot;src/**/*.cr&quot;</span>) <span class="k">do</span> <span class="o">|</span>entry<span class="o">|</span>
+    puts entry
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+
+<p>Output Example:</p>
+
+<pre><code><span class="s">/path/</span>to<span class="s">/foo/</span>src<span class="s">/foo/</span>bar.cr
+<span class="s">/path/</span>to<span class="s">/foo/</span>src<span class="s">/foo/</span>version.cr
+<span class="s">/path/</span>to<span class="s">/foo/</span>src<span class="s">/foo.cr</code></pre>
+
+<h3>Helpers</h3>
+
+<pre><code class='language-crystal'><span class="t">Cd</span>.into(<span class="s">&quot;/path/to/foo&quot;</span>) <span class="k">do</span>
+  foo.symlink?
+  foo.real_path
+  foo.join(<span class="s">&quot;bar&quot;</span>, <span class="s">&quot;baz&quot;</span>)
+  foo.cp <span class="s">&quot;/path/to/dst&quot;</span>
+<span class="k">end</span></code></pre>
+
+<h3>Creating Temporary Directories</h3>
+
+<pre><code class='language-crystal'><span class="t">Cd</span>.tmp(<span class="s">&quot;/path/to/tmp&quot;</span>) <span class="k">do</span> <span class="o">|</span>tmp<span class="o">|</span>
+  tmp.cd(<span class="s">&quot;foo&quot;</span>) <span class="k">do</span>
+    <span class="t">Dir</span>.current <span class="c"># &quot;/path/to/tmp/fLC8nt/foo&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="t">Dir</span>.exists?(<span class="s">&quot;/path/to/tmp/fLC8nt/foo&quot;</span>) <span class="c"># false</span></code></pre>
+
+<h3>Make it Your Own</h3>
+
+<pre><code class='language-crystal'><span class="k">class</span> <span class="t">SpecDir</span> <span class="o"><</span> <span class="t">Cd</span><span class="t">::</span><span class="t">DirEntry</span>
+  <span class="k">def</span> <span class="m">files</span>
+    glob(<span class="s">&quot;**/*_spec.cr&quot;</span>)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="t">CrystalDir</span> <span class="o"><</span> <span class="t">Cd</span><span class="t">::</span><span class="t">DirEntry</span>
+  dir <span class="s">&quot;spec&quot;</span>, <span class="t">SpecDir</span>
+  any <span class="s">&quot;shard.yml&quot;</span>
+
+  <span class="k">def</span> <span class="m">specs</span>
+    spec.glob(<span class="s">&quot;*_spec.cr&quot;</span>)
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="m">shard</span>
+    <span class="t">YAML</span>.parse(shard_yml.read)
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="m">version</span>
+    shard[<span class="s">&quot;version&quot;</span>].as_s
+  <span class="k">end</span>
+<span class="k">end</span>
+
+kemal <span class="o">=</span> <span class="t">CrystalDir</span>.<span class="k">new</span>(<span class="s">&quot;/path/to/kemal&quot;</span>)
+
+puts <span class="s">&quot;Listing kemal &#40;v</span><span class="i">#{</span></span>kemal.version<span class="s"><span class="i">}</span>&#41; specs.&quot;</span>
+
+kemal.spec.files.each <span class="k">do</span> <span class="o">|</span>f<span class="o">|</span>
+  puts f
+<span class="k">end</span></code></pre>
+
+<p>Output example:</p>
+
+<pre><code><span class="t">Listing</span> kemal (v0.<span class="n">17.5</span>) spec files.
+<span class="s">/path/</span>to<span class="s">/kemal/</span>spec<span class="s">/all_spec.cr
+/</span>path<span class="s">/to/</span>kemal<span class="s">/spec/</span>common_exception_handler_spec.cr
+<span class="s">/path/</span>to<span class="s">/kemal/</span>spec<span class="s">/common_log_handler_spec.cr
+/</span>path<span class="s">/to/</span>kemal<span class="s">/spec/</span>config_spec.cr
+<span class="s">/path/</span>to<span class="s">/kemal/</span>spec<span class="s">/context_spec.cr
+/</span>path<span class="s">/to/</span>kemal<span class="s">/spec/</span>handler_spec.cr
+<span class="s">/path/</span>to<span class="s">/kemal/</span>spec<span class="s">/helpers_spec.cr
+/</span>path<span class="s">/to/</span>kemal<span class="s">/spec/</span>init_handler_spec.cr
+<span class="s">/path/</span>to<span class="s">/kemal/</span>spec<span class="s">/param_parser_spec.cr
+/</span>path<span class="s">/to/</span>kemal<span class="s">/spec/</span>route_handler_spec.cr
+<span class="s">/path/</span>to<span class="s">/kemal/</span>spec<span class="s">/route_spec.cr
+/</span>path<span class="s">/to/</span>kemal<span class="s">/spec/</span>run_spec.cr
+<span class="s">/path/</span>to<span class="s">/kemal/</span>spec<span class="s">/view_spec.cr
+/</span>path<span class="s">/to/</span>kemal<span class="s">/spec/</span>websocket_handler_spec.cr</code></pre>
+
+<h2>Usage</h2>
+
+<pre><code class='language-crystal'><span class="k">require</span> <span class="s">&quot;cd&quot;</span></code></pre>
+
+<p>and see:</p>
+
+<ul><li><a href="#code_samples" target="_blank">Code Samples</a></li><li><a href="http://mosop.me/cd/Cd.html" target="_blank">API Document</a></li></ul>
+</div>
+</body>
+</html>
