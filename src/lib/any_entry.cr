@@ -1,5 +1,5 @@
 module Cd
-  # Manupulates a file or directory path.
+  # Manipulates a file or directory path.
   class AnyEntry
     include AsAnyEntry
 
