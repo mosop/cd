@@ -1,0 +1,17 @@
+name: cd
+version: 0.1.0
+
+authors:
+  - mosop
+
+crystal: 0.20.5
+
+license: MIT
+
+development_dependencies:
+  stdio:
+    github: mosop/stdio
+    version: ~> 0.1.3
+  crystal_plus:
+    github: mosop/crystal_plus
+    version: ~> 0.1.2

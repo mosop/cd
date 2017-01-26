@@ -1,0 +1,4 @@
+language: crystal
+
+after_success:
+- if [ "$TRAVIS_BRANCH" == "master" ]; then scripts/deploy_doc; fi
