@@ -114,7 +114,7 @@ module Cd
     def tmp(*args, &block)
       tmp = Cd.mkdtemp(@path)
       begin
-        cd(tmp, *args) do |dir|
+        new(tmp).cd(*args) do |dir|
           yield dir
         end
       ensure
