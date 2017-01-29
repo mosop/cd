@@ -8,6 +8,7 @@ module Cd
 
     # Writes text to this entry as a file.
     def write(text, mode : Int? = nil)
+      dir.create
       File.write path, text
       chmod(mode) if mode
     end
