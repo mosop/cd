@@ -23,7 +23,8 @@ module Cd
     getter path : String
 
     # :nodoc:
-    def initialize(@path : String)
+    def initialize(path : String)
+      @path = File.expand_path(path, Dir.current)
     end
 
     # Creates a new instance in this instance context.
