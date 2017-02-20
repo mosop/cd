@@ -90,5 +90,10 @@ module Cd
     def dir
       DirEntry.new(dirname)
     end
+
+    # Tests if this entry is executable.
+    def executable?(*args)
+      File.executable?(path)
+    end
   end
 end
