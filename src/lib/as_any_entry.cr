@@ -82,8 +82,12 @@ module Cd
     end
 
     # Returns this entry's base name.
-    def basename(suffix : String?)
-      File.basename(path, suffix)
+    def basename(suffix : String? = nil)
+      if suffix
+        File.basename(path, suffix)
+      else
+        File.basename(path)
+      end
     end
 
     # Returns a directory that contains this entry.
