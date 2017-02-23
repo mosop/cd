@@ -214,8 +214,12 @@ module Cd
     end
 
     # Removes this directory.
-    def remove(*args)
-      FileUtils.rm_r @path if Dir.exists?(@path)
+    def remove
+      begin
+        Dir.rmdir @path
+      rescue ex : Errno
+        raise ex unless ex.errno == Errno::ENOENT
+      end
     end
 
     # Iterates underlying entries.

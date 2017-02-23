@@ -95,5 +95,23 @@ module Cd
     def executable?(*args)
       File.executable?(path)
     end
+
+    # Removes this entry.
+    def remove
+      if directory?
+        dir.remove
+      else
+        begin
+          File.delete path
+        rescue ex : Errno
+          raise ex unless ex.errno == Errno::ENOENT
+        end
+      end
+    end
+
+    # Creates a new DirEntry with this entry's path.
+    def to_dir
+      DirEntry.new(path)
+    end
   end
 end
