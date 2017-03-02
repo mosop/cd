@@ -214,9 +214,13 @@ module Cd
     end
 
     # Removes this directory.
-    def remove
+    def remove(recursive = false)
       begin
-        Dir.rmdir @path
+        if recursive
+          FileUtils.rm_rf @path
+        else
+          Dir.rmdir @path
+        end
       rescue ex : Errno
         raise ex unless ex.errno == Errno::ENOENT
       end
