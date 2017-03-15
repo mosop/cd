@@ -8,13 +8,13 @@ module Cd
     macro inherited
       class ::Cd::DirEntry
         # :nodoc:
-        def new(klass : ::{{@type}}.class, path : String)
+        def new(path : String)
           ::{{@type}}.new(path)
         end
 
         # :nodoc:
         def [](klass : ::{{@type}}.class)
-          new(::{{@type}}, @path)
+          klass.new(@path)
         end
       end
     end

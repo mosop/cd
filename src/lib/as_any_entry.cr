@@ -8,7 +8,7 @@ module Cd
 
     # Writes text to this entry as a file.
     def write(text, mode : Int? = nil)
-      dir.create
+      basedir.create
       File.write path, text
       chmod(mode) if mode
     end
@@ -90,8 +90,8 @@ module Cd
       end
     end
 
-    # Returns a directory that contains this entry.
-    def dir
+    # Returns a new `DirEntry` that contains this entry.
+    def basedir
       DirEntry.new(dirname)
     end
 
@@ -103,7 +103,7 @@ module Cd
     # Removes this entry.
     def remove
       if directory?
-        dir.remove
+        to_dir.remove
       else
         begin
           File.delete path
@@ -113,7 +113,7 @@ module Cd
       end
     end
 
-    # Creates a new DirEntry with this entry's path.
+    # Creates a new `DirEntry` with this entry's path.
     def to_dir
       DirEntry.new(path)
     end
